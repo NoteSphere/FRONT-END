@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../CSS/CrearNota.css">
+    <script src="./../JS/CrearNota.js" defer></script>
+    <title>NoteSphere</title>
+    <!-- nav -->
+    <div class="input">
+        <a href="Categorias.html"  style="text-decoration: none;" class="value" >
+            Todas las categorias
+        </a>
+        <button class="value">
+            Categorias Favoritas
+        </button>
+        <form class="d-flex" role="search" style="margin-left: 590px;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+    </div>
+</head>
+
+<body>
+    <!-- boton de volver -->
+    <div class="espacioBtn">
+        <a href="Categorias.html" class="butto"  style="margin-left: 1000px; width: 100px; margin-top: 10px;">
+            <span class="text">Volver</span>
+        </a>
+    </div>
+
+  <!-- CrearNota -->
+    <h1>Crear una Nota</h1>
+    <div class="card">
+        <label for="">Titulo de la nota</label>
+        <input type="text" name="" id="Titulo">
+        <label for="">Escribe una Nota</label>
+        <textarea name="" id="Texto" cols="50" rows="30">
+        </textarea>
+        <div class="espacioBtn">
+            <button type="button" onclick="Crear()"  id="btnCrear" "form-submit-btn">Crear</button>
+        </div>
+    </div>
+    <script src="./../JS/CrearNota.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
