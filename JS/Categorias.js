@@ -1,7 +1,3 @@
-let id;
-
-
-
 /* CATEGORIAS */
 function listarCategorias(){
 
@@ -16,9 +12,8 @@ function listarCategorias(){
         return response.json()
     }).then(data => {
         data.forEach(function(element){
-
             let card = document.createElement("div");
-            card.classList.add("card","col-md-3", "me-3");
+            card.classList.add("card","col-md-3", "me-5", "mb-5");
             row.appendChild(card);
             let template = `
                 <div class="card-body d-flex flex-column">
@@ -27,7 +22,7 @@ function listarCategorias(){
                         <img src="./../img/images.png" alt="" style="width: 80px; height: 80px;" class="mb-2">
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
-                        <button class="btn btn-primary me-3" onclick="verNotas('${element.id}')"><i class="bi bi-box-arrow-in-right"></i></button>
+                        <button class="btn btn-primary me-3" onclick="verNotas('${element.id} ${element.nombre}')"><i class="bi bi-box-arrow-in-right"></i></button>
                         <button class="btn btn-danger" onclick="llamarEliminar('${element.id}')"><i class="bi bi-trash3-fill"></i></button>
                     </div>
                 </div>`
@@ -40,7 +35,11 @@ listarCategorias();
 
 /* NOTAS */
 function verNotas(id){
-    sessionStorage.setItem("IdCategoria", id);
+    let informacionCategoria = id.split(" ");
+    console.log(informacionCategoria);
+    sessionStorage.setItem("IdCategoria", informacionCategoria[0]);
+    sessionStorage.setItem("NombreCategoria", informacionCategoria[1]);
+    sessionStorage.setItem("EstadoCategoria", "Activo");
     location.href = `./Notas.html`
 }
 

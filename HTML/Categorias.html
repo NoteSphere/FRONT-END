@@ -11,21 +11,17 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">   
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark" id="navOculto">
+            <div class="container-fluid">
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Opciones -->
+              <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Todas las categorias</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Categorias favoritas</a>
-                  </li>     
                 </ul>
-
-                <!-- Buscador de Categorias -->
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
@@ -42,13 +38,12 @@
 
     <!-- Lista de las categorias -->
     <section class="categoriasLista mt-5">
-        <div class="container" id="listarCategorias">
+        <div class="container d-flex justify-content-center align-items-center" id="listarCategorias">
              
         </div>
     </section>
 
     <!-- modal -->
-<!--     <div class="confirmacionEliminar" id="seguroEliminar"> -->
     <div id="seguroEliminar" class="modal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
